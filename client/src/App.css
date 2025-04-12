@@ -1,0 +1,58 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #87ceeb, #ffffff);
+  color: #333;
+}
+
+.App-header {
+  padding: 2rem 1rem;
+}
+
+.App-header h1 {
+  margin: 0 0 1.5rem;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.App-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+}
+
+.loading {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #4a4a4a;
+}
+
+.initial-message {
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  color: #555;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.App-footer {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-size: 0.9rem;
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .App-header h1 {
+    font-size: 2rem;
+  }
+}
