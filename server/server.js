@@ -15,6 +15,14 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+const buildpath = path.join(__dirname, "../client/build");
+app.use(express.static(buildpath));
+
+// React/Vite fallback route
+app.get("*", (req, res) => {
+  res.sendFile(path.join(buildpath, "index.html"));
+});
+
 // Routes
 app.use('/api', weatherRoutes);
 
@@ -27,3 +35,5 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on PORT ${PORT}`);
 });
+
+
